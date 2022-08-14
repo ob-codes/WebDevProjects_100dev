@@ -1,0 +1,31 @@
+*{
+    background-color: lightskyblue;
+    color: white;
+}
+section{    
+    outline: 5px solid rgb(11, 184, 11);
+    padding: 30px;
+    margin: 30px;
+}
+h1{
+    font-style: italic;
+}
+h2{
+    font-weight: bold;
+}
+img{
+    width: 220px;
+    height: 300px;
+}
+aside{    
+    padding-right: 10px;
+}
+p{
+    font-size: 20px;
+}
+header ul li{
+    display: inline;
+}
+footer ul li{
+    display: inline;
+}
