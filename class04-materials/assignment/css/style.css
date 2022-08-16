@@ -3,9 +3,9 @@
     color: white;
 }
 section{    
-    outline: 5px solid rgb(11, 184, 11);
-    padding: 30px;
-    margin: 30px;
+    border: 5px solid rgb(11, 184, 11);
+    padding: 50px;
+    margin: 20px;
 }
 h1{
     font-style: italic;
@@ -18,7 +18,7 @@ img{
     height: 300px;
 }
 aside{    
-    padding-right: 10px;
+    float: right;
 }
 p{
     font-size: 20px;
