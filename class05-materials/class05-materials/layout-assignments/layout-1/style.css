@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+header, footer{
+    border: 1px solid gray;
+    height: 60px;
+
+    clear: both;
+}
+.top{
+    height: 80px;
+    border: 1px solid gray;
+
+    float: left;
+    width: 33.3333%;
+}
+.bot{
+    height: 100px;
+    border: 1px solid gray;
+
+    float: left;
+    width: 50%;
+}
