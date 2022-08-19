@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+header, footer{
+    height: 50px;
+    border: 1px solid gray;
+
+    clear: both;
+}
+section{
+    height: 180px;
+    width: 20%;
+    float: left;
+
+    border: 1px solid gray;
+}
+.wide{
+    width: 40%;
+}
