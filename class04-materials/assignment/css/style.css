@@ -1,17 +1,31 @@
-*{
-    background-color: lightskyblue;
-    color: white;
-}
-section{    
-    border: 5px solid rgb(11, 184, 11);
+body{
+    background-color: rgb(135, 206, 235);
+    border: 5px solid rgb(72, 205, 49);
     padding: 50px;
-    margin: 20px;
+    margin: 30px;
 }
 h1{
     font-style: italic;
+    text-align: center;
+    color: white;
+}
+header{
+    text-align: center;
+}
+a{
+    color: rgb(72, 205, 49);
+}
+header ul li, footer ul li{
+    display: inline;
+    font-weight: bold; 
+    color: white;
+}
+.separator{
+    color: rgb(128, 136, 139);
 }
 h2{
     font-weight: bold;
+    color: white;
 }
 img{
     width: 220px;
@@ -22,10 +36,8 @@ aside{
 }
 p{
     font-size: 20px;
+    color: rgb(234, 236, 237);
 }
-header ul li{
-    display: inline;
-}
-footer ul li{
-    display: inline;
+footer{
+    text-align: center;
 }
