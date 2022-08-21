@@ -51,7 +51,9 @@ table {
   Grid
   ========================================
 */
-*{
+*,
+*:before,
+*:after{
   box-sizing: border-box;
 }
 .container,
@@ -86,6 +88,7 @@ nav h4{
   padding-left: 15px;
   padding-right: 15px;
 }
+
 /*
   ========================================
   Clearfix
@@ -99,26 +102,11 @@ nav h4{
   clear: both;
   *zoom: 1;
 }
-.logo{  
-  border-top: 4px solid #648880;
-  padding-top: 40px 0 22px 0;
-  float: left;
-}
+
 small{
   float: left;
 }
-/*
-  ========================================
-  Primary footer
-  ========================================
-*/
-.primary-footer{
-  padding-bottom: 44px;
-  padding-top: 44px;
-}
-.primary-footer small{
-  float: left;
-}
+
 /*
   ========================================
   Typography
@@ -127,6 +115,7 @@ small{
 h1, h3, h4, h5, p {
   margin-bottom: 22px;
 }
+
 /*
   ========================================
   Buttons
@@ -141,6 +130,7 @@ h1, h3, h4, h5, p {
   border: 1px solid gray;
   padding: 10px 30px;
 }
+
 /*
   ========================================
   Home
@@ -149,6 +139,31 @@ h1, h3, h4, h5, p {
 .hero{
   padding: 22px 80px 66px 80px;
 }
+
+/*
+  ========================================
+  Primary header
+  ========================================
+*/
+.logo{  
+  border-top: 4px solid #648880;
+  padding-top: 40px 0 22px 0;
+  float: left;
+}
+
+/*
+  ========================================
+  Primary footer
+  ========================================
+*/
+.primary-footer small{
+  float: left;
+}
+.primary-footer{
+  padding-bottom: 44px;
+  padding-top: 44px;
+}
+
 /*
   ========================================
   Custom styles
