@@ -1,3 +1,8 @@
+/*
+  ========================================
+Resets
+  ========================================
+*/
 /* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
   License: none (public domain)
 */
@@ -59,10 +64,7 @@ table {
 .container,
 .grid{
   width: 960px;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 .container{
   padding-left: 30px;
@@ -138,6 +140,15 @@ h1, h3, h4, h5, p {
 */
 .hero{
   padding: 22px 80px 66px 80px;
+  line-height: 44px;
+  text-align: center;
+}
+.hero h2{
+  font-size: 36px;
+}
+.hero p{
+  font-size: 24px;
+  font-weight: 100;
 }
 
 /*
@@ -147,10 +158,27 @@ h1, h3, h4, h5, p {
 */
 .logo{  
   border-top: 4px solid #648880;
-  padding-top: 40px 0 22px 0;
   float: left;
+  font-size: 48px;
+  font-weight: 100;
+  letter-spacing: .5px;
+  line-height: 44px;
+  padding: 40px 0 22px 0;
+  text-transform: uppercase;
 }
-
+.tagline{
+  margin:66px 0 22px 0;
+  text-align: right;
+}
+.primary-nav{
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .5px;
+  text-transform: uppercase;  
+}
+.teaser a:hover h3{
+  color:#a9b2b9;
+}
 /*
   ========================================
   Primary footer
@@ -158,8 +186,11 @@ h1, h3, h4, h5, p {
 */
 .primary-footer small{
   float: left;
+  font-weight: 400;
 }
 .primary-footer{
+  color: #648880;
+  font-size: 14px;
   padding-bottom: 44px;
   padding-top: 44px;
 }
@@ -171,7 +202,7 @@ h1, h3, h4, h5, p {
 */
 body {
   color: #888;
-  font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 h1, h2, h3, h4{
   color:#648880;
@@ -194,4 +225,37 @@ h5{
   color:#a9b2b9;
   font-size: 14px;
   font-weight: 400;
+  text-transform: uppercase;
+}
+strong{
+  font-weight: 400;
+}
+em, cite{
+  font-style: italic;
+}
+
+/*
+  ========================================
+  Links
+  ========================================
+*/
+a{
+  color: #648880;
+  text-decoration: none;
+}
+a:hover{
+  color: #a9b2b9;
+}
+p a{
+  border-bottom: 1px solid #dfe2e5;
+}
+
+/*
+  ========================================
+  Navigation
+  ========================================
+*/
+
+.nav {
+  text-align: right;
 }
