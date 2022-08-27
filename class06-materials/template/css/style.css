@@ -29,14 +29,32 @@ body {
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
-
+header, footer {
+     height: 100px;
+     border: 3px solid gray;
+     clear: both;
 }
 
-footer {
-
+section.top {
+     /* display: inline-block; */
+     height: 200px;
+     width: 33.3333%;     
+     float: left;
+     border: 2px solid black;
 }
 
+section.bot {
+     /* display: inline-block; */
+     height: 200px;
+     width: 50%;     
+     float:left;
+     border: 2px solid black;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+@media screen and (max-width: 800px){
+     section{
+          background-color: blue;
+     }
+}
