@@ -43,10 +43,27 @@ section{
   width: 20%;
   float: left;
 }
+
 .wide{
   width:40%;
 }
 
+@media screen and (max-width: 600px) {
+  section{
+    background-color: green;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  section{
+    background-color: blue;
+    width: 33.3333%;
+  }
+
+  .wide{
+    display: none;
+  }
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
