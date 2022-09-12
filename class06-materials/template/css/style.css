@@ -29,14 +29,53 @@ body {
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
-
+header,
+footer {
+     border: 3px solid gray;
+     height: 30px;
 }
 
-footer {
-
+section{
+     border: 1px solid gray;
+     height: 60px;
+     width: 100px;
 }
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+@media screen and (max-width:375px) {
+     section{
+          height: 100px;
+          width: 100%;
+     }
+}
+
+@media (min-width: 376px) and (max-width: 820px) {
+     section{
+          height: 100px;
+          width: 50%;
+     }
+     
+     .side{
+          float: right;
+          height: 50px;
+          width: 50%;
+     }
+
+     footer{
+          clear: both;
+     }  
+}
+
+@media (min-width: 821px) {
+     section{
+          float: left;
+          height: 100px;
+          width: 33.3333%;
+     }
+     
+     footer{
+          clear: both;
+     }    
+}
