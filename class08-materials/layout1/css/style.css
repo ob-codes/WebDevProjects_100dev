@@ -32,6 +32,11 @@ body {
 header {
   float: left;
   width:15%;
+  padding: 0 20px;
+}
+
+header ul{
+  line-height: 1.5rem;
 }
 
 footer {
@@ -48,6 +53,41 @@ footer {
   width: 35%; 
   padding: 0 20px; 
 }
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.lower{
+  clear: both;
+  margin-left: 15%;
+  width: 85%;
+}
+
+.lower div,
+.lower img,
+.lower p{
+  float: left;
+  width: 33.3333%;
+  padding: 0 20px;
+}
+
+.lower h2,
+.lower h5{
+  margin: 5px 0;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+p,
+span{
+  color: gray;
+}
+
 
 /******************************************
 /* ADDITIONAL STYLES
