@@ -41,6 +41,13 @@ a{
   text-decoration: none;
   color: black;
 }
+.leftlist{
+  float: left;
+}
+.rightlist{
+  float: right;
+}
+
 li{
   list-style: none;
   display: inline;
@@ -48,10 +55,20 @@ li{
 }
 img{
   float: left;
-  padding: 50px 0;
+  padding: 50px 10px;
 }
 h1{
-  padding: 180px 0 0 0;
+  padding: 10% 10px 0 10px;
+}
+h3{
+  text-align: center;
+}
+.mainImage,
+.mainContent{
+  width: 50%;
+}
+.mainContent{
+  float: left;
 }
 
 /******************************************
