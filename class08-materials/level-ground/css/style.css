@@ -33,15 +33,18 @@ body {
 /**************header**********************/
 header{  
   background-color: #66768a;
+  padding-top: 10px;
   height: 40px;
 }
 header nav *{
   background-color: #66768a;
+  color: white; 
   float: left;
 }
 
 header nav ul{
-  width: 20%;
+  margin: 0px;  
+  width: 17%;
 }
 header nav img{
   padding-left: 30%;
@@ -49,14 +52,18 @@ header nav img{
 }
 header nav button{
   float: right;
+  background-color: white; 
+  color: #66768a;
   width: 10%;
 }
 
 header nav ul li{
   float: left;
-  list-style: none;  
+  list-style: none; 
   padding: 0 5%;
 }
+
+
 /**************big-1-section**********************/
 .big-1{
   clear: both;
@@ -79,9 +86,15 @@ header nav ul li{
   background-color: #dbdfe2;
   color: #212934;
   text-align: center;
-  padding: 0px 10%;
+  padding: 60px 10%;
   float: left;
   width: 50%;
+}
+
+.picBox{
+  border: 1px solid gray;
+  background-color: #66768a;
+  height: 200px;
 }
 
 /**************footer**********************/
@@ -92,6 +105,11 @@ footer {
 
 footer h5{
   color: #627285;
+}
+
+footer h4{
+  float: right;
+  color: black;
 }
 
 /**************anchor tag**********************/
