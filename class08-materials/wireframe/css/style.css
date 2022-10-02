@@ -21,18 +21,58 @@
 /* BASE STYLES
 /*******************************************/
 
-body {
-
+body > *{
+  padding: 2% 10%;
 }
 
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
-
+header nav *{
+  float: left;
+}
+header nav ul{
+  padding-left: 30%;
+  margin-top: 0;
+  width: 70%;
+}
+header nav button{
+  float: right;
+}
+header nav ul li{
+  list-style: none;
+  padding-left: 5%;
+  padding-right: 5%;
+  
 }
 
+main{
+  clear: both;
+  height: 500px;
+  background: #f5f9fc;
+}
+main > *{
+  float: left;
+  width: 50%;
+}
+.subsection{
+  background-color: #f5f9fc;
+}
+.subsection > section{
+  float: left;
+  width: 20%;
+}
+a{
+  text-decoration: none;
+  color: black
+}
+.page-2{
+  clear: both;
+  padding-right:0;
+  float: left;
+  width: 50%;
+}
 footer {
 
 }
