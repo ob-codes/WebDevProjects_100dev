@@ -40,6 +40,10 @@ header nav ul{
 header nav button{
   float: right;
 }
+button{
+  background-color:#304659;
+  color:#f5f9fc;
+}
 header nav ul li{
   list-style: none;
   padding-left: 5%;
@@ -82,3 +86,36 @@ h1, h2, h3, p{
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+@media screen  and (max-width: 360px)
+{
+  body > *{
+    padding: 5%;
+  }
+  main *{
+    width:100%;
+  }
+  main input{
+    padding:3% 0;
+  }
+  main button{
+    margin:3% 0;
+    padding:3% 0;
+    background-color:#304659;
+    color:#f5f9fc;
+  }
+  h1{
+    width: 100%;
+  }
+  header nav ul,
+  header nav button,
+  .page-2{
+    display: none;
+  }
+  header nav img{
+    padding-left: 40%;
+  }
+  .subsection section{
+    width:100%;
+  }
+  
+}
