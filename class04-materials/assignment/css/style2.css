@@ -1,0 +1,39 @@
+*{
+  background-color: #87ceeb;
+  color: white;
+}
+
+body{
+  border: 5px solid #4acc99;
+  margin: 30px 30px;
+  padding: 30px 50px;
+}
+
+h1{
+  text-align: center;
+  font-style: italic;
+}
+nav{  
+  text-align: center;
+}
+
+li{
+  list-style: none;  
+  font-size: 20px;
+  font-weight:bolder;
+  display: inline;
+}
+img{
+  width: 250px;
+  float: right;
+}
+p{
+  font-size: 20px;
+}
+a{
+  color:#4acc99;
+}
+
+.separator{
+  color: #808080;
+}
