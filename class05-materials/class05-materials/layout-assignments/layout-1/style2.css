@@ -1,0 +1,21 @@
+body *{
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+
+header, footer{
+  height: 60px;
+  clear: both;
+}
+
+section{
+  height: 80px;
+  float: left;
+  width: 33.3333%;
+}
+
+.bottom{
+  height: 100px;
+  float: left;
+  width: 50%;
+}
