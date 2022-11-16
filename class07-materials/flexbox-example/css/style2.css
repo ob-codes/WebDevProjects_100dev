@@ -1,0 +1,20 @@
+*{
+  box-sizing: border-box;
+}
+
+header,
+footer{
+  height: 100px;
+  border: 1px solid gray;
+}
+
+section{
+  height: 200px;
+  border: 1px solid gray;
+  flex: 1;
+}
+
+main,
+.bottom{
+  display: flex;
+}
