@@ -1,0 +1,20 @@
+*{
+  box-sizing: border-box;
+}
+
+header,
+footer{
+  height: 100px;
+  clear: both;
+  border: 1px solid gray;
+}
+section{
+  height: 200px;
+  border: 1px solid gray;
+}
+.bottom{
+  width: 50%;
+  height: 250px;
+  float: left;
+  border: 1px solid gray;
+}
