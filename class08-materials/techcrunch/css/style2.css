@@ -1,0 +1,32 @@
+*{
+  box-sizing: border-box;
+}
+
+header{
+  float: left;
+  width: 20%;
+}
+
+.centerSection{
+  float: left;
+  width: 50%;
+}
+
+.sideSection{
+  float:left;
+  width: 30%;
+}
+
+.lowerSection{
+  clear: both;
+  margin-left: 20%;
+}
+
+.lowerSection .left,
+.lowerSection .right,
+.lowerSection .center
+{
+  width: 30%;
+  float: left;
+  padding-right: 3%;
+}
