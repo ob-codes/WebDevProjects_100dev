@@ -1,0 +1,49 @@
+header nav *{
+  float: left;
+  width: 100%;
+  padding-top: 1%;
+}
+
+header nav a{
+  margin-left: 10%;
+  width: 5%;
+}
+header nav form{
+  margin-left: 5%;
+  width: 10%;
+}
+header nav img{
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 10%;
+}
+header nav ul{
+  list-style:none;
+  width: 30%;
+}
+header nav ul li{
+  display: inline;
+  width: 30%;
+}
+main{
+  clear: both;
+}
+main img{
+  width: 40%;
+  margin-left: 10%;
+  float: left;
+}
+main section{
+  float: left;  
+  width: 48%;
+  padding-top: 10%;
+  padding-left: 2%;
+}
+main section ul{
+  padding-left: 0;
+}
+main section ul li{
+  display: inline;
+  width: 30%;
+  padding-right: 2%;
+}
