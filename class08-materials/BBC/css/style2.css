@@ -1,5 +1,11 @@
 header{
-  margin: 2% 0;
+  padding: 2% 0;
+  background-color: black;
+  color: white;
+  height: 2%;
+}
+header a{
+  color: white;
 }
 header *{
   float: left;
