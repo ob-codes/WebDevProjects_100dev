@@ -1,0 +1,47 @@
+header{
+  margin: 2% 0;
+}
+header *{
+  float: left;
+}
+header img{
+  width: 10%;
+}
+header nav{
+  width: 85%;
+}
+header nav ul{
+  float: left;
+  width: 70%;
+  padding-left: 10%;
+  list-style: none;
+  margin-top: 0;
+}
+header nav ul li{
+  width: 10%;
+}
+main{
+  clear: both;
+}
+
+.bigHalf{
+  float: left;
+  width: 50%;
+}
+.bigHalf img{
+  width: 90%;
+}
+.smallUpperQuarter,
+.smallLowerQuarter{
+  float: left;
+  width: 25%;
+  
+}
+
+.lower{
+  clear: both;
+}
+.oneThird{
+  float: left;
+  width: 33.3333%;
+}
