@@ -1,0 +1,29 @@
+body{
+  padding: 2%;
+}
+header,
+main{
+  background-color: gray;
+  color: white;
+}
+header{
+  height: 50px;
+  padding-top: 25px;
+}
+main{
+  height: 500px;
+}
+header *{
+  float: left;
+  display: inline;
+  color: white;
+  margin-right: 2%;
+}
+header img{
+  margin-left: 40%;
+  margin-right: 30%;
+  width: 10%;
+}
+main{
+  clear: both;
+}
