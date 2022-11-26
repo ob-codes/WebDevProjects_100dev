@@ -1,9 +1,10 @@
 body{
+  box-sizing: border-box;
   padding: 2%;
 }
 header,
 main{
-  background-color: gray;
+  background-color: #66768a;
   color: white;
 }
 header{
@@ -12,6 +13,8 @@ header{
 }
 main{
   height: 500px;
+  clear: both;
+  padding: 100px 10% 0 10%;
 }
 header *{
   float: left;
@@ -24,6 +27,36 @@ header img{
   margin-right: 30%;
   width: 10%;
 }
-main{
+main *{
+  text-align: center;
+}
+h1{
+  font-size: 90pt;
+  font-stretch:narrower;
+}
+.why{
+  text-align: center;
+  height: 300px;  
   clear: both;
+  padding: 100px 20% 0 20%;
+}
+.twoSection{
+  padding: 7% 10% 0 10%;  
+  height: 600px;
+  background: #dbdfe2;
+}
+.twoSection section{
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+.twoSection section section{
+  background-color: #66768a;
+  height: 250px;
+  width: 400px;
+  margin: 10% 20%;
+}
+.lastSection{
+  clear: both;
+  text-align: center;
 }
