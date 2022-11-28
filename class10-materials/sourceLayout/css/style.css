@@ -22,21 +22,33 @@
 /*******************************************/
 
 body {
-
+  padding: 2% 5% ;
 }
 
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
-
+header nav{
+  padding-left: 10%;
+  width: 80%;
+}
+header nav ul li{
+  display: inline;
+  padding-left: 10%;
 }
 
-footer {
-
+header button{
+  float: right;
 }
-
+main{
+  clear: both;
+  padding-top: 5%;
+}
+.lower section{
+  float: left;
+  width: 25%;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
