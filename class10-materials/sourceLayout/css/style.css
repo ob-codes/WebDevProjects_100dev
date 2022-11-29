@@ -60,3 +60,24 @@ main section{
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+@media screen and (max-width: 600px) {
+  header nav,
+  header button{
+    display: none;
+  }
+  header img{
+    padding-left: 40%;
+  }
+  main button,
+  main input{
+    width: 50%;
+    margin-bottom: 2%;
+  }
+  main section,
+  main img{
+    width: 100%;
+  }
+  .lower{
+    display: none;
+  }
+}
