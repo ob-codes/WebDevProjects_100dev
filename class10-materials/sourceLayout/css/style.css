@@ -45,6 +45,14 @@ main{
   clear: both;
   padding-top: 5%;
 }
+main > *{
+  float: left;
+  width: 50%;
+}
+main section{
+  padding-left: 5%;
+  padding-top: 5%;
+}
 .lower section{
   float: left;
   width: 25%;
