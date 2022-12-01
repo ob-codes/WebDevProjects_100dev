@@ -1,0 +1,27 @@
+h1{
+  padding: 5% 0;
+  margin: 0 5%;
+  border-top: 3px solid purple;
+  border-bottom: 3px solid purple;
+  background-color: gold;
+}
+
+h2{
+  padding: 0% 15%;
+  border-left: 3px solid red;
+  border-right: 3px solid red;
+  background-color: orange;
+  font-family: 'Roboto', sans-serif;
+}
+
+section{
+  border-left: 10px solid magenta;
+  padding: 100px 0;
+  margin-right: 200px;
+}
+
+span{
+  border: 1px solid dodgerblue;
+  background-color: pink;
+  padding: 0 10px 10px 0;
+}
