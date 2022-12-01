@@ -22,7 +22,7 @@
 /*******************************************/
 
 body {
-  padding: 2% 5%;
+  padding: 2% 2%;
 }
 
 
@@ -35,6 +35,17 @@ header nav ul li{
 }
 main{
   background-image: url("../img/hairsalonhairstylists-touchups_az.jpg");
+  height: 800px;
+  object-fit:cover;
+}
+
+main h1{
+  padding: 10% 0 0 5%;
+  font-size: 700;
+}
+
+main p{
+  padding: 2% 0 0 5%;
 }
 main section{
   background-color: black;
