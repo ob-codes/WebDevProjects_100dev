@@ -20,19 +20,16 @@
 /******************************************
 /* BASE STYLES
 /*******************************************/
-
+section{
+  border: 3px solid gray;
+  height: 100px;
+}
 
 /******************************************
 /* LAYOUT
 /*******************************************/
 
-section{
-  border: 3px solid gray;
-  height: 100px;
-}
-*{
-  box-sizing: border-box;
-}
+
 /* On mobile, please make all sections stack  */
 @media screen and (max-width:600px) {
   main section,
