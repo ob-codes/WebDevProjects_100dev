@@ -5,12 +5,12 @@
 
 /* Clear fix hack */
 .clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .clear {
@@ -37,27 +37,49 @@ footer {
 
 }
 
-.container1{
-  display: flex;
-}
-
-.container1 section{
+.container1 section,
+.container2 section,
+.container3 section
+{
   border: 1px solid gray;
 }
 
 .fItem1{
-  flex:2;
+  flex:1;
   order: 1;
 }
 .fItem2{
-  flex:2;
+  flex:1;
   order: 2;
 }
 .fItem3{
-  flex:3;
+  flex:1;
   order: 3;
+}
+
+.container2 section{
+  flex-basis: 27%;
+}
+
+.container3{
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+.container3 section{
+  flex-basis: 17%;
 }
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+@media (min-width:786px) {
+  .container1,
+  .container2{
+    display: flex;  
+    align-items: stretch;
+  }
+  .container2{    
+    justify-content:space-around;
+  }
+}
