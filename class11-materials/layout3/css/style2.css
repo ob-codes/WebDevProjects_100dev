@@ -24,11 +24,57 @@
 body {
 
 }
+/*******************header: ************************/
+header{
+  display: flex;
+}
+header nav{
+  display: flex;
+  width: 90%;
+}
+/*******************header: for li horizontal expansion************************/
+header nav a{
+  padding-left: 2%;
+}
+header nav ul{
+  display: flex;
+  list-style:none;
+  flex-basis: 80%;
+  justify-content: space-around;
+}
 
+/******************main: to flex everything*************************/
+main{
+  display: flex;  
+  justify-content: flex-start;
+}
+/********************main: giving width to both half and quarters***********************/
+.rightHalf,
+.leftHalf,
+.fourth{  
+  flex-basis: 50%;
+}
+.rightHalf{
+  display: flex; 
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
+/******************lower: to flex everything*************************/
+.lower{
+  display: flex;
+}
+.oneThird{
+  flex: 1;
+}
 /******************************************
 /* LAYOUT
 /*******************************************/
+.leftHalf{
+  background-image: url("../img/peace_deal.jpg");
+  background-size: contain;
+}
+
 
 /******************************************
 /* ADDITIONAL STYLES
