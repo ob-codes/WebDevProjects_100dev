@@ -60,7 +60,13 @@ console.log(s.split('r')); //used for tokenization of the input string
 
 //Arrays
 const number = new Array(1,2,3,4,5); //declared using constructor
-const number2 = [1,2,3,4,5, 'apple', true]; //mix datatypes are allowed
+const fruits = ['apple','banana','pears', 'tomato', 75, true]; //mix datatypes are allowed
+fruits[3] = 'grapes';
+
+fruits.pop();
+fruits.push('mango');
+fruits.shift();
+fruits.unshift('apricot');
 
 console.log(number);
-console.log(number2);
+console.log(fruits);
