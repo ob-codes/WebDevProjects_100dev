@@ -31,7 +31,7 @@ console.log(typeof(x)); //return type as object -> bogus value //problem in js
 console.log(typeof(y));
 console.log(typeof(z));
 */
-
+/*
 //String operation
 const name1 = 'john';
 const age = 30;
@@ -40,3 +40,14 @@ console.log('My name is ' + name1 + ' and I am ' + age); //difficult in long str
 
 //template string
 console.log(`My name is ${name1} and I am ${age}`);
+*/
+
+//String property & methods
+const s ='Hello World';
+
+console.log(s.length); //property does have (), method has ()
+console.log(s.toUpperCase()); //method
+console.log(s.toLowerCase()); //method
+console.log(s.substring(0, 4)); //method
+console.log(s.substring(0, 5).toUpperCase()); //combination of two methods
+console.log(s.split('r')); //used for tokenization of the input string
