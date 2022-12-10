@@ -70,3 +70,8 @@ fruits.unshift('apricot');
 
 console.log(number);
 console.log(fruits);
+
+console.log(Array.isArray(fruits));
+console.log(Array.isArray(1));
+
+console.log(fruits.indexOf('mango'));
