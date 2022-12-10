@@ -14,7 +14,7 @@ console.log(age2);
 */
 
 //String, numbers, boolean, null, undefined, symbol
-
+/*
 const name1 = 'john';
 const age = 30;
 const rating = 4.5;
@@ -30,3 +30,13 @@ console.log(typeof(isCool));
 console.log(typeof(x)); //return type as object -> bogus value //problem in js
 console.log(typeof(y));
 console.log(typeof(z));
+*/
+
+//String operation
+const name1 = 'john';
+const age = 30;
+//String concat
+console.log('My name is ' + name1 + ' and I am ' + age); //difficult in long string 
+
+//template string
+console.log(`My name is ${name1} and I am ${age}`);
