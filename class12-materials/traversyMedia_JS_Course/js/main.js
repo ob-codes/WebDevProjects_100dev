@@ -27,6 +27,6 @@ console.log(name1);
 console.log(typeof(name1));
 console.log(typeof(rating));
 console.log(typeof(isCool));
-console.log(typeof(x));
+console.log(typeof(x)); //return type as object -> bogus value //problem in js
 console.log(typeof(y));
 console.log(typeof(z));
