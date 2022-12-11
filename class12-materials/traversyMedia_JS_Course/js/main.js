@@ -57,7 +57,7 @@ console.log(s.substring(0, 5).toUpperCase()); //combination of two methods
 console.log(s.split('r')); //used for tokenization of the input string
 */
 
-
+/*
 //Arrays
 const number = new Array(1,2,3,4,5); //declared using constructor
 const fruits = ['apple','banana','pears', 'tomato', 75, true]; //mix datatypes are allowed
@@ -75,3 +75,22 @@ console.log(Array.isArray(fruits));
 console.log(Array.isArray(1));
 
 console.log(fruits.indexOf('mango'));
+*/
+
+//Objects
+const person = {
+  firstName : 'John',
+  lastName : 'Doe',
+  age: 30,
+  hobbies: ['music', 'movies', 'sports'],
+  address:{
+    street: '50 main st',
+    city: 'Boston',
+    state:'MA'
+  }
+}
+
+console.log(person.firstName, person.lastName);
+console.log(person.address);
+console.log(person.hobbies[1]);
+alert(person.address.city); //shows pop up on webpage
