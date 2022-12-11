@@ -77,6 +77,7 @@ console.log(Array.isArray(1));
 console.log(fruits.indexOf('mango'));
 */
 
+/*
 //Objects
 const person = {
   firstName : 'John',
@@ -100,3 +101,29 @@ console.log(firstName, lastName, city);
 
 person.email = 'john@email.com'; 
 console.log(person);
+*/
+
+//Arrays of Objects
+const array1 = [
+  {
+    id : 1,
+    name : 'first',
+    age : 23
+  },
+  {
+    id : 2,
+    name : 'second',
+    age : 28,
+    address: {
+      street: 'Main st', 
+      city : 'Boston', 
+      state : 'MA'
+    }
+  }
+];
+console.log(array1[0].name);
+console.log(array1[1].address);
+
+//JSON strings
+const array1JSON = JSON.stringify(array1);
+console.log(array1JSON);
