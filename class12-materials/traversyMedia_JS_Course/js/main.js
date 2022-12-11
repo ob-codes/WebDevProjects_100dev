@@ -93,4 +93,10 @@ const person = {
 console.log(person.firstName, person.lastName);
 console.log(person.address);
 console.log(person.hobbies[1]);
-alert(person.address.city); //shows pop up on webpage
+//alert(person.address.city); //shows pop up on webpage
+
+const {firstName, lastName, address: {city} } = person; 
+console.log(firstName, lastName, city);
+
+person.email = 'john@email.com'; 
+console.log(person);
