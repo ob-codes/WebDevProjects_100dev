@@ -103,6 +103,7 @@ person.email = 'john@email.com';
 console.log(person);
 */
 
+/*
 //Arrays of Objects
 const array1 = [
   {
@@ -127,3 +128,18 @@ console.log(array1[1].address);
 //JSON strings
 const array1JSON = JSON.stringify(array1);
 console.log(array1JSON);
+*/
+
+//For loop
+for(let i=0;i<3;i++)
+{
+  console.log(`The for loop counter is ${i}`);
+}
+
+//while loop
+let i=0;
+while(i<3)
+{
+  console.log(`The while loop counter is ${i}`);
+  i++;
+}
