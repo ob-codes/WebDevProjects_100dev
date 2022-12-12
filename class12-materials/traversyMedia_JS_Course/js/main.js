@@ -130,6 +130,7 @@ const array1JSON = JSON.stringify(array1);
 console.log(array1JSON);
 */
 
+/*
 //For loop
 for(let i=0;i<3;i++)
 {
@@ -143,3 +144,84 @@ while(i<3)
   console.log(`The while loop counter is ${i}`);
   i++;
 }
+*/
+
+/*
+//iterate using loops
+const array1 = [
+  {
+    id : 1,
+    name : 'first',
+    age : 23
+  },
+  {
+    id : 2,
+    name : 'second',
+    age : 28,
+    address: {
+      street: 'Main st', 
+      city : 'Boston', 
+      state : 'MA'
+    }
+  },
+  {
+    id : 3,
+    name : 'second',
+    age : 28,
+    address: {
+      street: 'Main st', 
+      city : 'Boston', 
+      state : 'MA'
+    }
+  }
+];
+
+for (let i=0; i < array1.length; i++)
+{
+  console.log(array1[i].id);
+}
+
+for (let x of array1)
+{
+  console.log(x.id);
+}
+*/
+
+//high order array method: forEach
+const array1 = [
+  {
+    id : 1,
+    name : 'first',
+    age : 23
+  },
+  {
+    id : 2,
+    name : 'second',
+    age : 28,
+    address: {
+      street: 'Main st', 
+      city : 'Boston', 
+      state : 'MA'
+    }
+  },
+  {
+    id : 3,
+    name : 'second',
+    age : 28,
+    address: {
+      street: 'Main st', 
+      city : 'Boston', 
+      state : 'MA'
+    }
+  }
+];
+
+array1.forEach(function(arr){
+  console.log(arr.id);
+});
+
+//map
+const arrayAge = array1.map(function(arr3){
+  return arr3.age;
+});
+console.log(arrayAge);
