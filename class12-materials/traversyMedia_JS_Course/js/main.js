@@ -192,7 +192,8 @@ const array1 = [
   {
     id : 1,
     name : 'first',
-    age : 23
+    age : 23,
+    isCompleted: true
   },
   {
     id : 2,
@@ -202,7 +203,8 @@ const array1 = [
       street: 'Main st', 
       city : 'Boston', 
       state : 'MA'
-    }
+    },
+    isCompleted: false
   },
   {
     id : 3,
@@ -212,7 +214,8 @@ const array1 = [
       street: 'Main st', 
       city : 'Boston', 
       state : 'MA'
-    }
+    },
+    isCompleted: true
   }
 ];
 
@@ -225,3 +228,17 @@ const arrayAge = array1.map(function(arr3){
   return arr3.age;
 });
 console.log(arrayAge);
+
+//filter
+const arrCompleted = array1.filter(function(arr4){
+  return arr4.isCompleted === true;
+});
+console.log(arrCompleted);
+
+//filter + map
+const arrCompleted2 = array1.filter(function(arr4){
+  return arr4.isCompleted === true;
+}).map(function(arr4) {
+  return arr4.id;
+});
+console.log(arrCompleted2);
