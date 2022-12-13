@@ -187,6 +187,7 @@ for (let x of array1)
 }
 */
 
+/*
 //high order array method: forEach
 const array1 = [
   {
@@ -242,3 +243,21 @@ const arrCompleted2 = array1.filter(function(arr4){
   return arr4.id;
 });
 console.log(arrCompleted2);
+*/
+
+/*
+//if-else
+const x = 4;
+const y=10;
+
+if (x==10) //only matches value
+{
+  console.log('x is 10');
+}
+if (x==='10') //matches both value and type
+{
+  console.log('x is 10');
+}
+else
+  console.log("x is not '10'");
+  */
