@@ -260,4 +260,22 @@ if (x==='10') //matches both value and type
 }
 else
   console.log("x is not '10'");
-  */
+*/
+
+//ternary operator
+const x = 10;
+const color = x > 9 ? 'black' : 'blue';
+
+//switch-case
+switch(color)
+{
+  case 'blue': 
+    console.log('color is blue');
+    break;
+  case 'red':
+    console.log('color is red');
+    break;
+  default:
+    console.log('color is NOT red NEITHER blue');
+    break;
+}
