@@ -299,6 +299,7 @@ console.log(addNums(1, 3));
 const addNums = (num1 = 0, num2 = 0) => num1 + num2;
 */
 
+/*
 //Constructor
 function Person (firstName, lastName, dob) {
   this.firstName = firstName; 
@@ -319,5 +320,21 @@ person2 = new Person('Marry' , 'Doe', '11-30-1992');
 console.log(person1);
 console.log(person1.getFullName());
 console.log(person2.getBirthYear());
+*/
 
-
+//Constructor prototype
+function Person (firstName, lastName, dob) {
+  this.firstName = firstName; 
+  this.lastName = lastName; 
+  this.dob = new Date(dob);  
+}
+//prototype hides the function details 
+Person.prototype.getBirthYear = function(){
+  return this.dob.getFullYear();
+}
+Person.prototype.getFullName = function() {
+  //return this.firstName + this.lastName ;
+  return `${this.firstName} ${this.lastName}`;
+}
+person1 = new Person('John' , 'Doe', '11-21-1996');
+console.log(person1);
