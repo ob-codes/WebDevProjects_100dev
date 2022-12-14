@@ -282,16 +282,42 @@ switch(color)
 }
 */
 
+//function
+/*
 function addNums(num1 = 0, num2 = 0){
   return num1 + num2;
 }
 console.log(addNums(1, 3));
-/*
+
 1- replace function keyword with const 
 2- put = sign after func name
 3- put arrow operator after parameters
 4- { } optional for single statement 
 5- () optional when only one input paramter
 6- return statement is not required when {} not used
-*/
+
 const addNums = (num1 = 0, num2 = 0) => num1 + num2;
+*/
+
+//Constructor
+function Person (firstName, lastName, dob) {
+  this.firstName = firstName; 
+  this.lastName = lastName; 
+  this.dob = new Date(dob);
+  this.getBirthYear = function () {
+    return this.dob.getFullYear();
+  }
+  this.getFullName = function() {
+    //return this.firstName + this.lastName ;
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+
+//initiate object
+person1 = new Person('John' , 'Doe', '11-21-1996');
+person2= new Person('Marry' , 'Doe', '11-30-1992');
+console.log(person1);
+console.log(person1.getFullName());
+console.log(person2.getBirthYear());
+
+
