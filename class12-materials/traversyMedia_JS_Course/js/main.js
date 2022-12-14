@@ -315,7 +315,7 @@ function Person (firstName, lastName, dob) {
 
 //initiate object
 person1 = new Person('John' , 'Doe', '11-21-1996');
-person2= new Person('Marry' , 'Doe', '11-30-1992');
+person2 = new Person('Marry' , 'Doe', '11-30-1992');
 console.log(person1);
 console.log(person1.getFullName());
 console.log(person2.getBirthYear());
