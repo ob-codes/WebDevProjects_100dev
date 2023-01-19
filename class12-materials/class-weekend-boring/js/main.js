@@ -1,10 +1,37 @@
-document.querySelector('#check').addEventListener('click', check)
+let result;
 
-function check() {
+document.querySelector("#check").addEventListener('click', calculate);
 
-  const day = document.querySelector('#day').value
+function calculate(){
+  const inputDayName = document.querySelector("#day").value;
+  
+  switch (inputDayName) {
+    case "monday":
+    case "Monday":
+    case "wednesday":
+    case "Wednesday":
+      result = "its class day";
+      break;
 
-  //Conditionals go here
+    case "saturday":
+    case "Saturday":
+    case "sunday":
+    case "Sunday":
+      result = "its weekend";
+      break;
+    
+    case "tuesday":
+    case "Tuesday":
+    case "thursday":
+    case "Thursday":
+      result = "its boring day";
+      break;
 
-
+    default:
+      result = "wrong input";
+      break;
+  }
+  
+  document.querySelector("#placeToSee").innerHTML = result;
+  document.querySelector("#day").style.innerHTML = " ";
 }
