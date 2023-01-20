@@ -4,6 +4,7 @@ document.getElementById("pumpkin").addEventListener('click', makeZero);
 document.querySelector("#dominosPizza").addEventListener('click', addThree);
 document.querySelector("#zebra").addEventListener('click', addNine);
 document.getElementById("cantThinkOfAnything").addEventListener('click', subTwo);
+document.getElementById("multiple").addEventListener("click", multiplyTen);
 
 
 function makeZero(){
@@ -24,4 +25,9 @@ function addNine(){
 function subTwo(){
   total -= 2;
   document.querySelector("#placeToPutResult").innerHTML = total;
+}
+
+function multiplyTen(){
+  total *= 10;
+  document.getElementById("placeToPutResult").innerText = total;
 }
