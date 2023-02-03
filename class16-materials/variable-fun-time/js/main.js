@@ -12,12 +12,12 @@ console.log(num);
 
 //document.querySelector("#danceDanceRevolution").addEventListener(, takeinput);
 
-let input = document.querySelector("#danceDanceRevolution").value;
 
-//add 25 to that number
-input += 25;
-//alert that number
-alert(input);
+
+// //add 25 to that number
+// input += 25;
+// //alert that number
+// alert(input);
 
 //--- Hard
 //create a variable that holds the h1
@@ -33,7 +33,7 @@ console.log(heading);
 heading.addEventListener("click", sum);
 
 function sum(){
- 
+  let input = document.querySelector("#danceDanceRevolution").value;
   let result = num + parseInt(input);
   console.log(result);
 }
