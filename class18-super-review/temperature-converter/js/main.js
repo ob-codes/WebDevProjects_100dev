@@ -1,6 +1,6 @@
 //Write your pseduo code first! 
 //take input 
-document.querySelector("h1").addEventListener("click", run)
+document.querySelector("h2").addEventListener("click", run)
 
 function run() {
   let num;
