@@ -8,7 +8,8 @@ alert(food1);
 let str1;
 str1="its a string";
 
-alert(str1[1]);
+//alert(str1[1]);
+alert(str1.charAt(1));
 
 // *Functions*
 // Create a function that takes in 3 numbers. Divide the first two numbers and multiply the last. Alert the product. Call the function.
@@ -19,19 +20,20 @@ function maths(n1,n2,n3){
 maths(12,3,4);
 // Create a function that takes in 1 number. Console log the cube root of the number. Call the function.
 function cubeRoot(n1){
-  console.log(n1*n1*n1);
+  console.log(Math.cbrt(n1).toFixed(4));
 }
-cubeRoot(2);
+cubeRoot(7);
 // *Conditionals*
 //Create a function that takes in a month. If it is a summer month alert "YAY". If another other month, alert "Booo"
-function yayOrBoo(mon){
-  if (mon > 3 && mon < 9)
+function yayOrBoo(inp){
+  let month = inp.toLowerCase();
+  if (month === "june" || month === "july" || month === "august")
     alert("YAY");
   else
     alert("Boo");
 }
 
-yayOrBoo(4);
+yayOrBoo('JUly');
 
 //*Loops*
 //Create a function that takes in a number. Console log every number from 1 to that number while skipping multiples of 5.
