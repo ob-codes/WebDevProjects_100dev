@@ -9,7 +9,9 @@ function validatePIN (pin) {
     if (pin.charCodeAt(i) < 48 || pin.charCodeAt(i) > 57)    
       return false;
   }    
-   
+  /*
+  pin.match(/^\d+$/);
+  */
   return true;
 }
 
