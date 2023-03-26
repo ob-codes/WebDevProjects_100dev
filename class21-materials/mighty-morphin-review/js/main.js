@@ -44,12 +44,13 @@ printHighestAndLowest(22, 77, 55);
 
 // *Conditionals*
 //Create a function that returns heads or tails randomly and as fairly as possible. Call the function.
-function headsOrTails(){
-  if (Math.random() < 0.5)
-    return "Heads";
-  else
-    return "Tails";
+/*function headsOrTails(){
+  let result = Math.random() < 0.5 ? "Heads" : "Tails";
+    
+  return result;
 }
+*/
+const headsOrTails = () => Math.random() < 0.5 ? "Heads" : "Tails";
 console.log(headsOrTails());
 
 //*Loops*
