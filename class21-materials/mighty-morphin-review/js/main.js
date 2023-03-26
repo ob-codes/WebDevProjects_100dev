@@ -24,6 +24,7 @@ function subFrom100(n1,n2,n3,n4,n5){
 subFrom100(11,22,33,44,55);
 // Create a function that takes in 3 numbers. Console log lowest and highest values. Call the function.
 function printHighestAndLowest(n1,n2,n3){
+  /*
   let result = [];
   result.push(n1);
   result.push(n2);
@@ -32,6 +33,12 @@ function printHighestAndLowest(n1,n2,n3){
   result = result.sort();
 
   console.log(result[0], result[2]);
+  */
+
+  let min = Math.min(n1,n2,n3);
+  let max = Math.max(n1,n2,n3);
+
+  console.log(min, max);
 }
 printHighestAndLowest(22, 77, 55);
 
