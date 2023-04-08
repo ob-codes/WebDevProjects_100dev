@@ -50,12 +50,6 @@ function gameRockPaperScissors(userInput){
 //*Loops*
 //Create a function that takes an array of choices. Play the game x times where x is the number of choices in the array. Print the results of each game to the console.
 function playMultipleTimes(choices) {
-  // for (let i =0; i< choices.length; i++)
-  // {
-  //   console.log(gameRockPaperScissors(choices[i]));
-  // }
-
   choices.forEach(x => gameRockPaperScissors(x));
-
 }
 playMultipleTimes(["rock", "paper", "scissors"]);
