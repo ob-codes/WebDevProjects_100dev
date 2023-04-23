@@ -142,7 +142,7 @@
 // }
 // getACuteDogPhoto()
 
-
+/*
 function oneHour(){
   console.log(`THis is one hour reminder`);
 }
@@ -157,8 +157,8 @@ function threeHour(){
 oneHour();
 twoHour();
 threeHour();
+*/
 
-/*
 function onehour(){
   console.log(`THis is one hour reminder`);
 }
@@ -179,7 +179,7 @@ function fourHour(){
 }
 onehour();
 twoHour(threeHour, fourHour);
-*/
+
 /*
 function oneHour() {
   setTimeout(() => {
