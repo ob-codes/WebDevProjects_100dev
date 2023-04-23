@@ -57,18 +57,18 @@
 // houseOne()
 
 //Code 05
-const promise = new Promise((resolve, reject) => {
-    const error = false
-    if(!error){
-        resolve('Promise has been fullfilled')
-    }else{
-        reject('Error: Operation has failed')
-    }
-})
-console.log(promise)
-promise
-    .then(data => console.log(data))
-    .catch(err => console.log(err))
+// const promise = new Promise((resolve, reject) => {
+//     const error = false
+//     if(!error){
+//         resolve('Promise has been fullfilled')
+//     }else{
+//         reject('Error: Operation has failed')
+//     }
+// })
+// console.log(promise)
+// promise
+//     .then(data => console.log(data))
+//     .catch(err => console.log(err))
 
 //Code 06
 // function houseOne(){
@@ -142,3 +142,58 @@ promise
 // }
 // getACuteDogPhoto()
 
+
+function oneHour(){
+  console.log(`THis is one hour reminder`);
+}
+function twoHour(){
+  setTimeout(() => {
+    console.log(`THis is two hour reminder`)
+  }, 1000);
+}
+function threeHour(){
+  console.log(`THis is three hour reminder`);
+}
+oneHour();
+twoHour();
+threeHour();
+
+/*
+function onehour(){
+  console.log(`THis is one hour reminder`);
+}
+function twoHour(callback1, callback2){
+  setTimeout(() => {
+    console.log(`THis is two hour reminder`);
+    callback1(callback2);
+  }, 2000);
+}
+function threeHour(callback2) {
+  setTimeout(()=>{
+    console.log(`THis is three hour reminder`);
+    callback2();
+  }, 5000);
+}
+function fourHour(){
+  console.log(`THis is four hour reminder`);
+}
+onehour();
+twoHour(threeHour, fourHour);
+*/
+/*
+function oneHour() {
+  setTimeout(() => {
+    console.log(`THis is one hour reminder`);
+    setTimeout(() => {
+      console.log(`THis is two hour reminder`);
+      setTimeout(() => {
+        console.log(`THis is three hour reminder`);
+        setTimeout(() => {
+          console.log(`THis is four hour reminder`);
+        }, 4000);
+      }, 3000);
+    }, 2000);
+  }, 10000);
+}
+oneHour();
+*/
