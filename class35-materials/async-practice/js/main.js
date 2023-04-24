@@ -158,7 +158,7 @@ oneHour();
 twoHour();
 threeHour();
 */
-
+/*
 function onehour(){
   console.log(`THis is one hour reminder`);
 }
@@ -179,8 +179,8 @@ function fourHour(){
 }
 onehour();
 twoHour(threeHour, fourHour);
+*/
 
-/*
 function oneHour() {
   setTimeout(() => {
     console.log(`THis is one hour reminder`);
@@ -196,4 +196,3 @@ function oneHour() {
   }, 10000);
 }
 oneHour();
-*/
