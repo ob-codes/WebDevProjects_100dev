@@ -224,15 +224,29 @@ function twoHour() {
     setTimeout(() => {
       resolve(`This is two hour reminder`);
       //reject();
-    }, 5000);
+    }, 4000);
   });
 
   return temp2;
 }
 
+function threeHour() {
+  let temp = new Promise((resolve, reject) => {
+    const error = true;
+    if (!error)
+      resolve(`This is three hour reminder`);
+    else 
+      reject(`failed - three hour`);
+  });
+
+  return temp;
+}
+
 oneHour()
   .then(data => console.log(data))
   .then(twoHour)
+  .then(data => console.log(data))
+  .then(threeHour)
   .then(data => console.log(data))
   .catch(err => console.log(err));
 
