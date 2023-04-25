@@ -142,6 +142,8 @@
 // }
 // getACuteDogPhoto()
 
+/********************************************************************************************/
+
 /*
 function oneHour(){
   console.log(`THis is one hour reminder`);
@@ -158,6 +160,25 @@ oneHour();
 twoHour();
 threeHour();
 */
+
+/*
+function oneHour() {
+  setTimeout(() => {
+    console.log(`THis is one hour reminder`);
+    setTimeout(() => {
+      console.log(`THis is two hour reminder`);
+      setTimeout(() => {
+        console.log(`THis is three hour reminder`);
+        setTimeout(() => {
+          console.log(`THis is four hour reminder`);
+        }, 4000);
+      }, 3000);
+    }, 2000);
+  }, 10000);
+}
+oneHour();
+*/
+
 /*
 function onehour(){
   console.log(`THis is one hour reminder`);
@@ -181,18 +202,37 @@ onehour();
 twoHour(threeHour, fourHour);
 */
 
-function oneHour() {
-  setTimeout(() => {
-    console.log(`THis is one hour reminder`);
+function oneHour(){
+  let temp = new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log(`THis is two hour reminder`);
-      setTimeout(() => {
-        console.log(`THis is three hour reminder`);
-        setTimeout(() => {
-          console.log(`THis is four hour reminder`);
-        }, 4000);
-      }, 3000);
+      let error = false;
+  
+      if (!error){
+        resolve(`This is one hour reminder`);
+      }
+      else {
+        reject('rejected');
+      }      
     }, 2000);
-  }, 10000);
+  });
+
+  return temp;
 }
-oneHour();
+
+function twoHour() {
+  let temp2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(`This is two hour reminder`);
+      //reject();
+    }, 5000);
+  });
+
+  return temp2;
+}
+
+oneHour()
+  .then(data => console.log(data))
+  .then(twoHour)
+  .then(data => console.log(data))
+  .catch(err => console.log(err));
+
