@@ -232,7 +232,7 @@ function twoHour() {
 
 function threeHour() {
   let temp = new Promise((resolve, reject) => {
-    const error = true;
+    const error = false;
     if (!error)
       resolve(`This is three hour reminder`);
     else 
@@ -241,7 +241,7 @@ function threeHour() {
 
   return temp;
 }
-
+/*
 oneHour()
   .then(data => console.log(data))
   .then(twoHour)
@@ -249,4 +249,16 @@ oneHour()
   .then(threeHour)
   .then(data => console.log(data))
   .catch(err => console.log(err));
+*/
 
+async function sequentialRun() {
+  let temp1 = await oneHour();
+  let temp2 = await twoHour();
+  let temp3 = await threeHour();
+
+  console.log(temp1);
+  console.log(temp2);
+  console.log(temp3);
+}
+
+sequentialRun();
