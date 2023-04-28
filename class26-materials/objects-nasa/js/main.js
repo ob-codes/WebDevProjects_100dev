@@ -11,7 +11,17 @@ function getFetch(){
   .then(data => {
     console.log(data);
     document.querySelector("h2").innerText = data.title;
-    document.querySelector("img").src = data.url;
+    if (data.media_type === "image") {
+      document.querySelector("img").src = data.url;
+      document.querySelector("img").classList.remove("hidden");
+      document.querySelector("iframe").classList.add("hidden");
+    }
+    else{
+      document.querySelector("iframe").src = data.url;
+      document.querySelector("iframe").classList.remove("hidden");
+      document.querySelector("img").classList.add("hidden");
+    }
+
     document.querySelector("h3").innerText = data.explanation;
 
   })
