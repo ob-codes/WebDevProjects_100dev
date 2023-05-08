@@ -110,7 +110,7 @@ houseTwo(houseThree);
 // promise
 //     .then(data => console.log(data))
 //     .catch(err => console.log(err))
-/*
+
 const p = new Promise((resolved, reject) => {
   if (false)
     resolved('successful');
@@ -125,7 +125,7 @@ const p = new Promise((resolved, reject) => {
   .catch(err => {
     console.log(`err: ${err}`);
   });
-*/
+
 //Code 06
 // function houseOne(){
 //     return new Promise((resolve, reject) => {
