@@ -62,7 +62,7 @@ houseThree();
 // houseOne()
 // houseTwo(houseThree)
 
-/*
+
 function houseOne() {
   setTimeout(() => {
     console.log(`Delivered to House-1`);
@@ -81,7 +81,7 @@ function houseThree() {
 }
 houseOne();
 houseTwo(houseThree);
-*/
+
 
 //Code 04
 // function houseOne(){
