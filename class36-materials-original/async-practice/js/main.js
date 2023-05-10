@@ -26,7 +26,7 @@
 // houseTwo()
 // houseThree()
 
-
+/*
 function houseOne(){
   setTimeout(() => {
     console.log(`Delivered to House-1`);
@@ -45,7 +45,7 @@ function houseThree() {
 houseOne();
 houseTwo();
 houseThree();
-
+*/
 //Code 03
 // function houseOne(){
 //     console.log('Paper delivered to house 1')
@@ -62,7 +62,7 @@ houseThree();
 // houseOne()
 // houseTwo(houseThree)
 
-
+/*
 function houseOne() {
   setTimeout(() => {
     console.log(`Delivered to House-1`);
@@ -81,7 +81,7 @@ function houseThree() {
 }
 houseOne();
 houseTwo(houseThree);
-
+*/
 
 //Code 04
 // function houseOne(){
@@ -110,7 +110,7 @@ houseTwo(houseThree);
 // promise
 //     .then(data => console.log(data))
 //     .catch(err => console.log(err))
-
+/*
 const p = new Promise((resolved, reject) => {
   if (false)
     resolved('successful');
@@ -125,7 +125,7 @@ const p = new Promise((resolved, reject) => {
   .catch(err => {
     console.log(`err: ${err}`);
   });
-
+*/
 //Code 06
 // function houseOne(){
 //     return new Promise((resolve, reject) => {
@@ -190,7 +190,7 @@ function houseZ() {
       reject(`HouseZ not successful`);
   });
 }
-
+/*
 houseX()
   .then(data => {
     console.log(data);
@@ -206,6 +206,17 @@ houseX()
   .catch(err => {
     console.log(`err: ${err}`);
   });
+*/
+
+async function deliveryToHouses() {
+  const x = await houseX();
+  console.log(x);
+  const y = await houseY();
+  console.log(y);
+  const z = await houseZ();
+  console.log(z);
+}
+deliveryToHouses();
 
 //Code 07
 // function houseOne(){
@@ -248,4 +259,3 @@ houseX()
 //     console.log(data)
 // }
 // getACuteDogPhoto()
-
