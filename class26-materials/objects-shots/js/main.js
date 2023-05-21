@@ -17,13 +17,13 @@ function getFetch(){
     console.log(choiceString);
 
     for (let i = 0; i < data.drinks.length; i++) {
-      if(data.drinks[i].strDrink.toLowerCase().match(choiceString.toLowerCase()))
+      if(data.drinks[i].strDrink.toLowerCase() === choiceString.toLowerCase())
       {
         document.querySelector('h2').innerText = data.drinks[i].strDrink;
         document.querySelector('h3').innerText = data.drinks[i].strInstructions;
         document.querySelector('img').src = data.drinks[i].strDrinkThumb;
-      }              
-    }    
+      }     
+    }
   })
   .catch(err => {
     console.log(`error ${err}`);
