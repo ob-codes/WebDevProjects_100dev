@@ -21,17 +21,11 @@ h1{
   font-size: 5rem;
 }
 
-main{
-  display: flex;
-  flex-direction: row;
-}
-
 button{
-  flex: 1;
-  justify-content: space-around;
+  display: block;
   font-size: 3rem;
-  margin: 2% 10%;
-  padding: 1%;  
+  margin: 1% auto;
+  padding: 1% 2%;
 }
 
 section{
@@ -42,15 +36,20 @@ section{
 
 img{
   flex: 1;
-  margin: 2% 0;
+  margin: 3% 0;
   padding: 0 5%;
   height: 400px;
   width: 300px;
 }
 
 h3{
+  width: 20%;
   text-align: center;
-  font-size: 3rem;
+  font-size: 3.5rem;
+  color:blue;
+  padding: 1% 0;
+  margin: 0 auto;
+  border: 3px solid red;
 }
 
 

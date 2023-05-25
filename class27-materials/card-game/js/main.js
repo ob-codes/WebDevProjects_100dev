@@ -12,53 +12,13 @@ if (!localStorage.getItem("botCard"))
 getDeck(); //on-page load or page-refresh
 
 document.getElementById("btn2").addEventListener("click", drawCard);
-document.getElementById("btn3").addEventListener("click", checkWin);
-
-function checkWin(){
-  let usrChoice = convertToNum(localStorage.getItem("userCard"));
-  let botChoice = convertToNum(localStorage.getItem("botCard"));
-
-  if (usrChoice === botChoice) {
-    document.querySelector("h3").innerText = "WARRRRRRRRR!!!";
-
-    setTimeout(drawCardForUser, 500);
-    drawCardForBot();
-    setTimeout(drawCardForUser, 500);
-    drawCardForBot();
-    setTimeout(drawCardForUser, 500);
-    drawCardForBot();
-  }
-  else if (usrChoice > botChoice) {
-    document.querySelector("h3").innerText = "You Won";
-  }
-  else if (usrChoice < botChoice) {
-    document.querySelector("h3").innerText = "You Lost";
-  }
-}
-
-function getDeck(){
-  const url = "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1";
-  
-  fetch(url)
-  .then(res => res.json())
-  .then(data => {
-    console.log(data);
-    
-    localStorage.setItem("deckID", data.deck_id);
-    deckID = data.deck_id;
-
-    document.querySelector("h3").innerText = "Deck ready...";
-  })
-  .catch(err => {
-    console.log(`err : ${err}`);
-  });
-}
 
 function drawCard(){
+  document.querySelector("h3").innerText = "Drawing cards..";
   drawCardForUser();
   drawCardForBot();
 
-  checkWin();
+  setTimeout(checkWin, 1500);
 }
 
 function drawCardForUser(){
@@ -83,6 +43,46 @@ function drawCardForBot(){
   .then(data => {
     document.getElementById("botCard").src = data.cards[0].image;
     localStorage.setItem("botCard", convertToNum(data.cards[0].value));
+  })
+  .catch(err => {
+    console.log(`err : ${err}`);
+  });
+}
+
+function checkWin(){
+  let usrChoice = convertToNum(localStorage.getItem("userCard"));
+  let botChoice = convertToNum(localStorage.getItem("botCard"));
+
+  if (usrChoice === botChoice) {
+    document.querySelector("h3").innerText = "WARRRRRRRRR!!!";
+
+    setTimeout(drawCardForUser, 1000);
+    drawCardForBot();
+    setTimeout(drawCardForUser, 1000);
+    drawCardForBot();
+    setTimeout(drawCardForUser, 1000);
+    drawCardForBot();
+  }
+  else if (usrChoice > botChoice) {
+    document.querySelector("h3").innerText = "You Won";
+  }
+  else if (usrChoice < botChoice) {
+    document.querySelector("h3").innerText = "You Lost";
+  }
+}
+
+function getDeck(){
+  const url = "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1";
+  
+  fetch(url)
+  .then(res => res.json())
+  .then(data => {
+    console.log(data);
+    
+    localStorage.setItem("deckID", data.deck_id);
+    deckID = data.deck_id;
+
+    document.querySelector("h3").innerText = "Deck ready...";
   })
   .catch(err => {
     console.log(`err : ${err}`);
