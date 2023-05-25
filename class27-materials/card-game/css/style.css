@@ -2,21 +2,55 @@
 /* CSS
 /*******************************************/
 
+html{
+  font-size: 62.5%;;
+  font-family: 'Roboto', 'Sans-serif';
+}
+
 /* Box Model Hack */
 *{
   box-sizing: border-box;
+  background-color: plum;
 }
 
 /******************************************
 /* LAYOUT
 /*******************************************/
+h1{
+  text-align: center;
+  font-size: 5rem;
+}
+
+main{
+  display: flex;
+  flex-direction: row;
+}
+
+button{
+  flex: 1;
+  justify-content: space-around;
+  font-size: 3rem;
+  margin: 2% 10%;
+  padding: 1%;  
+}
+
 section{
   display: flex;
+  flex-direction: row;
+  padding: 0 15%;
 }
+
 img{
   flex: 1;
-  margin: 0 auto;
-  height: 200px;
+  margin: 2% 0;
+  padding: 0 5%;
+  height: 400px;
+  width: 300px;
+}
+
+h3{
+  text-align: center;
+  font-size: 3rem;
 }
 
 

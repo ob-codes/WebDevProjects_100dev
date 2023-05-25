@@ -1,10 +1,7 @@
 //Example fetch using pokemonapi.co
 
-if (!localStorage.getItem("userDeckID"))
-  localStorage.setItem("userDeckID", 0); 
-
-if (!localStorage.getItem("botDeckID"))
-  localStorage.setItem("botDeckID", 0); 
+if (!localStorage.getItem("DeckID"))
+  localStorage.setItem("DeckID", 0); 
 
 if (!localStorage.getItem("userCard"))
   localStorage.setItem("userCard", 0); 
@@ -12,35 +9,24 @@ if (!localStorage.getItem("userCard"))
 if (!localStorage.getItem("botCard"))
   localStorage.setItem("botCard", 0);
 
-document.getElementById("btn1").addEventListener("click", getDeck);
+getDeck(); //on-page load or page-refresh
+
 document.getElementById("btn2").addEventListener("click", drawCard);
 document.getElementById("btn3").addEventListener("click", checkWin);
 
-function getDeck() {
-  document.querySelector("h3").innerText = "Loading...";
-
-  getDeckForUser();
-  getDeckForBot();
-}
-
-function drawCard() {
-  document.querySelector("h3").innerText = "Drawing...";
-
-  drawCardForUser();
-  drawCardForBot();
-}
-
 function checkWin(){
-  let usrChoice = Number(localStorage.getItem("userCard"));
-  let botChoice = Number(localStorage.getItem("botCard"));
+  let usrChoice = convertToNum(localStorage.getItem("userCard"));
+  let botChoice = convertToNum(localStorage.getItem("botCard"));
 
   if (usrChoice === botChoice) {
     document.querySelector("h3").innerText = "WARRRRRRRRR!!!";
 
-    drawCard();
-    drawCard();
-    drawCard();
-    drawCard();
+    setTimeout(drawCardForUser, 500);
+    drawCardForBot();
+    setTimeout(drawCardForUser, 500);
+    drawCardForBot();
+    setTimeout(drawCardForUser, 500);
+    drawCardForBot();
   }
   else if (usrChoice > botChoice) {
     document.querySelector("h3").innerText = "You Won";
@@ -50,7 +36,7 @@ function checkWin(){
   }
 }
 
-function getDeckForUser(){
+function getDeck(){
   const url = "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1";
   
   fetch(url)
@@ -58,32 +44,25 @@ function getDeckForUser(){
   .then(data => {
     console.log(data);
     
-    localStorage.setItem("userDeckID", data.deck_id);
-    userDeckID = data.deck_id;
+    localStorage.setItem("deckID", data.deck_id);
+    deckID = data.deck_id;
+
+    document.querySelector("h3").innerText = "Deck ready...";
   })
   .catch(err => {
     console.log(`err : ${err}`);
   });
 }
 
-function getDeckForBot(){
-  const url = "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1";
-  
-  fetch(url)
-  .then(res => res.json())
-  .then(data => {
-    console.log(data);
-    
-    localStorage.setItem("botDeckID", data.deck_id);
-    botDeckID = data.deck_id;
-  })
-  .catch(err => {
-    console.log(`err : ${err}`);
-  });
+function drawCard(){
+  drawCardForUser();
+  drawCardForBot();
+
+  checkWin();
 }
 
 function drawCardForUser(){
-  const url = `https://deckofcardsapi.com/api/deck/${userDeckID}/draw/?count=1`;
+  const url = `https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=1`;
 
   fetch(url)
   .then(res => res.json())
@@ -97,7 +76,7 @@ function drawCardForUser(){
 }
 
 function drawCardForBot(){
-  const url = `https://deckofcardsapi.com/api/deck/${botDeckID}/draw/?count=1`;
+  const url = `https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=1`;
 
   fetch(url)
   .then(res => res.json())
