@@ -17,8 +17,11 @@ function getFetch(){
         document.querySelector("h2").innerText = data.name;
         document.querySelector("h3").innerText = data.classes[0].name;
         data.subclasses.forEach(element => {
+            //create li
             const li = document.createElement("li");
+            //add text to li
             li.textContent = element.name;
+            //append li to ul
             document.querySelector("ul").appendChild(li); 
         });
       })
