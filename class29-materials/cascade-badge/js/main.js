@@ -52,7 +52,16 @@ function ownMultiple(arr){
 
   return resArray;
 }
-
 console.log(ownMultiple([68, -1, 1, -7, 10, 10] ));
 
-//Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.Return your answer as a number.
+//Given an array of integers as strings and numbers, return the sum of the array 
+//values as if all were numbers. Return your answer as a number.
+function returnNumbers(arr){
+  let res = 0;
+
+  res += arr.reduce((acc, element) => acc + Number(element), 0);
+
+  return res;
+}
+console.log(returnNumbers([1,2,"3"]));
+
