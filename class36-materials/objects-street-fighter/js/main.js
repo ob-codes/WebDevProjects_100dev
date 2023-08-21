@@ -1,6 +1,6 @@
 //Create a street fighter constructor that makes fighting game 
 //characters with 4 properties and 3 methods
-
+/*
 function MakeFighter(name, gender, lethality, spMove) {
   this.name = name;
   this.gender = gender;
@@ -14,6 +14,25 @@ function MakeFighter(name, gender, lethality, spMove) {
     console.log(`this is my ${this.lethality}`);
   }
   this.yell = function () {
+    console.log(`ha ha ha! come ONNNNNN`);
+  }
+}
+*/
+
+class MakeFighter{
+  constructor(name, gender, lethality, spMove){
+    this.name = name;
+    this.gender = gender;
+    this.lethality = lethality;
+    this.spMove = spMove;
+  }
+  tellSpecialMove() {
+    console.log(`this is my ${this.spMove}`);
+  }
+  tellLethality() {
+    console.log(`this is my ${this.lethality}`);
+  }
+  yell() {
     console.log(`ha ha ha! come ONNNNNN`);
   }
 }
