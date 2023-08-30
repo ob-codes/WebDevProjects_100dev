@@ -78,7 +78,7 @@ const server = http.createServer((req, res) => {
 
 server.listen(8000);
 */
-/*
+
 const http = require('http');
 const fs = require('fs');
 const url = require('url');
@@ -113,30 +113,29 @@ const server = http.createServer((req, res) => {
     fs.readFile('css/style.css', (err, data) => {
       res.write(data);
       res.end();
-    })
+    });
   }
   else if (page === '/js/main.js') {
     fs.readFile('js/main.js', (err, data) => {
       res.writeHead(200, {'Content-Type' : 'text/javascript'});
       res.write(data);
       res.end();
-    })
+    });
   }
-  else if (page === '/api') {
-    let para = querystring.parse(url.parse(req.url).query);
-    if (para === 'leon') {
-      const jsonObject = {
+  else if (page === '/api') {  
+    let jsonObject;  
+    if (params['student'] === 'leon') {
+      jsonObject = {
         'name' : 'leon',
         'status' : 'active'
       }
     }   
     else {
-      const jsonObject = {
+      jsonObject = {
         'name' : 'null',
         'status' : 'standby'
       }
     } 
-
     res.writeHead(200, {'Content-Type' : 'application/json'});
     res.end(JSON.stringify(jsonObject));
   }
@@ -148,58 +147,3 @@ const server = http.createServer((req, res) => {
   
 });
 server.listen(8000);
-*/
-
-/*********/
-const http = require('http');
-const fs = require('fs');
-const url = require('url');
-const querystring = require('querystring');
-
-let server2 = http.createServer((req, res) => {
-  const page = url.parse(req.url).pathname;
-  const para = querystring.parse(url.parse(req.url).query);
-
-  if (page === '/') {
-    fs.readFile('index.html', (err, data) => {
-      res.writeHead(200, {'Content-Type' : 'text/html'});
-      res.write(data)
-      res.end();
-    });
-  }
-  else if (page === '/otherpage') {
-    fs.readFile('otherpage.html', (err, data) => {
-      res.writeHead(200, {'Content-Type' : 'text/html'});
-      res.write(data)
-      res.end();
-    });
-  }
-  else if (page === '/otherotherpage') {
-    fs.readFile('otherotherpage.html', (err, data) => {
-      res.writeHead(200, {'Content-Type' : 'text/html'});
-      res.write(data)
-      res.end();
-    });
-  }  
-  else if (page === '/css/style.css') {
-    fs.readFile('css/style.css', (err, data) => {
-      res.write(data);
-      res.end();
-    });
-  }
-  else if (page === '/js/main.js') {
-    fs.readFile('js/main.js', (err, data) => {
-      res.writeHead(200, {'Content-Type' : 'text/javascript'})
-      res.write(data)
-      res.end();
-    });
-  }
-  else {
-    res.writeHead(200, {'Content-Type' : 'text/html'});
-    res.write('error: 404')
-    res.end();
-  }
-  
-});
-
-server2.listen(8002);
