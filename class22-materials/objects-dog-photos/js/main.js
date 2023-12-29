@@ -25,6 +25,9 @@ async function fetchImage() {
     const data = await res.json(); 
 
     console.log(data);  
+    document.querySelector("#dog-1").src = data.message;
+    document.querySelector("#dog-2").src = data.message;
+    document.querySelector("#dog-3").src = data.message;
   } 
   catch (error) {
     console.log(error);
