@@ -27,6 +27,14 @@
     <div class="col-3 mt-5">
       <p><%= post.caption %></p>
     </div>
+    <h2>Add a comment</h2>
+    <form action="/post/addComment/<%=post.id%>" method="POST">
+      <div class="mb-3">
+        <label for="desc" class="form-label">Description</label>
+        <textarea type="text" class="form-control" id="desc" name="desc"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
     <div>
       <ul>
         <% for (var i=0; i<comments.length; i++) {%>
