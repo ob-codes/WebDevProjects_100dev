@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require('cors');
 const mongoose = require("mongoose");
 const passport = require("passport");
 const session = require("express-session");
@@ -19,6 +20,9 @@ require("./config/passport")(passport);
 
 //Connect To Database
 connectDB();
+
+//allow cors
+app.use(cors());
 
 //Using EJS for views
 app.set("view engine", "ejs");
