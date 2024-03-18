@@ -1,3 +1,4 @@
+require("dotenv").config({ path: "./config/.env" });
 const cloudinary = require("../middleware/cloudinary");
 const Post = require("../models/Post");
 const Comment = require("../models/Comment");
@@ -31,7 +32,7 @@ module.exports = {
   createPost: async (req, res) => {
     try {
       // Upload image to cloudinary
-      const result = await cloudinary.uploader.upload(req.file.path);
+      const result = await cloudinary.uploader.upload(req.file.path, {folder: process.env.CLOUDINARY_FOLDER_NAME});
 
       await Post.create({
         title: req.body.title,
@@ -56,6 +57,7 @@ module.exports = {
         postId: req.params.id,
       });
       console.log("Comment has been added!");
+      console.log(req.body);
       res.redirect(`/post/${req.params.id}`);  
     } catch (error) {
       console.log(err);      
