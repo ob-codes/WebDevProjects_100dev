@@ -1,6 +1,6 @@
 const express = require("express");
-const app = express();
 const cors = require('cors');
+const app = express();
 const mongoose = require("mongoose");
 const passport = require("passport");
 const session = require("express-session");
@@ -21,18 +21,22 @@ require("./config/passport")(passport);
 //Connect To Database
 connectDB();
 
-//allow cors
-app.use(cors());
 
+// views are the files you render
+app.set('views', __dirname + '/views');
 //Using EJS for views
 app.set("view engine", "ejs");
 
+//allow cors
+app.use(cors());
+
+app.set('public', __dirname + '/public');
 //Static Folder
 app.use(express.static("public"));
 
 //Body Parsing
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 //Logging
 app.use(logger("dev"));
