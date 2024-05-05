@@ -4,7 +4,7 @@
   <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
-  <script type="text/javascript">
+  <script type="text/babel">
     const rootElement = document.querySelector("#root");  
     
     /* direct HTML approach
@@ -17,14 +17,26 @@
     rootElement.appendChild(divElement);
     */
     
-    /*element using React approach*/
+    /*element using React approach
      
     const myElement = React.createElement('div', {
       children: ['this is ', 'my div'],
       className: 'container',
     });
     ReactDOM.render(myElement, rootElement);
-    
+    */
 
+    /*element using JSX approach*/
+    
+    const children = "New Div";
+    const className = "container";
+    const props = {children, className};
+    const element = 
+      <div >
+        <span>Hello World</span>
+      </div>
+
+    ReactDOM.render(element, rootElement);
+    
   </script>
 </body>
