@@ -7,7 +7,7 @@
   <script type="text/javascript">
     const rootElement = document.querySelector("#root");  
     
-    /* direct HTML approach*/
+    /* direct HTML approach
     const divElement = document.createElement('div');
     divElement.className = 'container'
     divElement.textContent = 'My New Div';
@@ -15,7 +15,16 @@
     divElement.style.fontSize = '2rem';
 
     rootElement.appendChild(divElement);
+    */
     
+    /*element using React approach*/
+     
+    const myElement = React.createElement('div', {
+      children: ['this is ', 'my div'],
+      className: 'container',
+    });
+    ReactDOM.render(myElement, rootElement);
     
+
   </script>
 </body>
